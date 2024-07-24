@@ -14,20 +14,19 @@ void show(double *v, int n){
 //Metodo de ordenacao
 void InsertionSort(double *v, int n){
 
+    int i, j;
     double temp;
-
-    for(int i=0; i<n; i++){
-        for(int j=i+1; j>=0; j--){
-            if(j == n)
-                break;
-            else if(v[j-1] > v[j]){
-                temp = v[j-1];
-                v[j-1] = v[j];
-                v[j] = temp;
-            }
+    for (i = 1; i < n; i++) {
+        temp = v[i];
+        j = i - 1;
+        while (j >= 0 && v[j] > temp) {
+            v[j + 1] = v[j];
+            j = j - 1;
         }
+        v[j + 1] = temp;
     }
 }
+
 
 void readFile(double *v, char file[50]){
     int i=0, lixo;
