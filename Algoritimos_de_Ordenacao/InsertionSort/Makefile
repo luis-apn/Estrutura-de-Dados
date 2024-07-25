@@ -1,38 +1,50 @@
-all:
-	g++ *.cpp -o InsertionSort
+Exec = ./InsertionSort 
+DIR = instancias-num/
 
-run_1:
-	./InsertionSort instancias-num/num.1000.1.in
 
-run_2:
-	./InsertionSort instancias-num/num.1000.2.in
+# Compila o arquivo completo
+all:	InsertionSort # Dependencia para a target
+	g++ InsertionSort.o main.cpp -o InsertionSort
+ 
+#Gera o arquivo binario o INsertionSort
+InsertionSort:
+	g++ -c InsertionSort.cpp
 
-run_3:
-	./InsertionSort instancias-num/num.1000.3.in
+run_1000_1:
+	$(Exec) $(DIR)num.1000.1.in
 
-run_4:
-	./InsertionSort instancias-num/num.1000.4.in
+run_1000_2:
+	$(Exec) $(DIR)num.1000.2.in
 
-run_5:
-	./InsertionSort instancias-num/num.10000.1.in
+run_1000_3:
+	$(Exec) $(DIR)num.1000.3.in
 
-run_6:
-	./InsertionSort instancias-num/num.10000.2.in
+run_1000_4:
+	$(Exec) $(DIR)num.1000.4.in
 
-run_7:
-	./InsertionSort instancias-num/num.10000.3.in
+run_10000_1:
+	$(Exec) $(DIR)num.10000.1.in
 
-run_8:
-	./InsertionSort instancias-num/num.10000.4.in
+run_10000_2:
+	$(Exec) $(DIR)num.10000.2.in
 
-run_9:
-	./InsertionSort instancias-num/num.100000.1.in
+run_10000_3:
+	$(Exec) $(DIR)num.10000.3.in
 
-run_10:
-	./InsertionSort instancias-num/num.100000.2.in
+run_10000_4:
+	$(Exec) $(DIR)num.10000.4.in
 
-run_11:
-	./InsertionSort instancias-num/num.100000.3.in
+run_100000_1:
+	$(Exec) $(DIR)num.100000.1.in
 
-run_12:
-	./InsertionSort instancias-num/num.100000.4.in
+run_100000_2:
+	$(Exec) $(DIR)num.100000.2.in
+
+run_100000_3:
+	$(Exec) $(DIR)num.100000.3.in
+
+run_100000_4:
+	$(Exec) $(DIR)num.100000.4.in
+
+clean:
+	rm InsertionSort.o InsertionSort
