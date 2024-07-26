@@ -25,7 +25,7 @@ $ make clean
 
 ## Selection Sort
 
-#### Este algoritmo se trata de uma ordenação simples e fácil de ser implementada, no qual consiste em pegar o menor no vetor e colocar na primeira posição e em seguinda o segundo menor valor, e assim consecutivamente.
+#### Este algoritmo se trata de uma ordenação simples e fácil de ser implementada, no qual consiste em pegar o menor valor no vetor e colocar na primeira posição e em seguinda o segundo menor valor, e assim consecutivamente.
 
 ### Compilando e Executando
 #### Dentro do repositório do Selection Sort possue um arquivo denominado Makefile no qual já estão predefinidas todas os comandos de compilação, basta seguir dos seguintes passos para excutar:
