@@ -1,5 +1,5 @@
 #pragma once
-#define TAM_MAX 100 //-> O tamanho maximo da lista pode ser definido de forma arbitraria
+#define TAM_MAX 20 //-> O tamanho maximo da lista pode ser definido de forma arbitraria
 #include <iostream>
 
 //Criando um template para as variaveis sere definidas de forma arbitrarias, sem a necessidade de um definicao de um tipo estatico
@@ -49,7 +49,7 @@ public:
         if((posicao > tam_atual) || posicao <= 0)
             return -1;
         
-        dado = dados[posicao];
+        dado = dados[posicao - 1];
         return dado;
     }
 
@@ -91,6 +91,19 @@ public:
 
         tam_atual--; 
         return dado;
+    }
+
+    void exibir(){
+        std::cout << "List[" << tam_atual << "] = [ ";
+        for(int i=0; i<tam_atual; i++){
+            if(i == tam_atual - 1){
+                std::cout << dados[i] << " ]\n";
+                break;
+            }else{
+                std::cout << dados[i] << " ,";
+            
+            }
+        }
     }
 };
 
