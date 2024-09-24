@@ -4,27 +4,10 @@
 #include <fstream>
 #include <iostream>
 #include <string.h>
-#include <utility> //biblioteca para utilizar a biblioteca pair
+#include <utility> 
 #include "Fila_Sequencial/FilaSeq.h"
 #include <algorithm>
-#include <stack> //biblioteca para trabalhar com pilhas em c++
-
-/*
-pair -> O pair é um container para armazenar par de dados que podem ser de diferentes tipos
-
-sintaxe:
-pair <primeiro tipo, segundo tipo> nome_do_par_de_dados;
-
-lendo os dados:
-nome_do_par_de_dados.first
-nome_do_par_de_dados.second
-
-Criando pares:
-make_pair(primeiro dado, segundo dado)
-
-nome_do_dado.first = dado
-nome_do_dado.second = dado
-*/
+#include <stack> 
 
 using namespace std;
 
@@ -45,8 +28,6 @@ public:
     //Algoritmo de busca
     void bfs(int s, int d);
     void dfs(int s, int d);
-    //int calcularDistancia(const vector<int>& caminho);
-
 
 private:
     int ordem;

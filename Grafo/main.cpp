@@ -18,7 +18,6 @@ int main(int argc, char *argv[]){
     int s;
     int d;
 
-
     Grafo grafo(argv[1]);
     
     cout << "GRAFO COM MATRIZ DE ADJACENCIA\n";
