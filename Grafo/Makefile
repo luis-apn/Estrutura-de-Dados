@@ -29,7 +29,6 @@ instancia2:
 
 instancia3:
 	@echo Executando a Instancia 3...
-	
 	@./main $(inst3)
 
 instancia4:
